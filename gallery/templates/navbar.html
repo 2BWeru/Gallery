@@ -1,0 +1,46 @@
+{% load static %}
+{% load bootstrap3 %}
+
+{% block styles %}
+{% bootstrap_css %}
+<link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+{% endblock %}
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+<div class="menu-wrap">
+        <input type="checkbox" class="toggler">
+        <div class="hamburger"><div></div></div>
+        <div class="menu">
+            <div>
+                <div>
+                    <ul>
+                        <li><a href="{% url 'home'%}">Home</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Log in</a></li>
+                        <li><a href="#">Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="showcase">
+        <div class="container showcase-inner">
+            <h1>Mint's_Gallery</h1>
+            <p>Match your Jacket class with luxury and comfort.</p>
+            <a href="#" target="_blank" class="btnn">Buy</a>
+        </div>
+        <div class="contact-links">
+            <a href="https://www.instagram.com/mintz/?hl=en" target="_blank" 
+               class="btn contact-details"><i class="fab fa-instagram"></i>
+               </a>
+            <a
+               href="https://twitter.com/mintz"
+               target="_blank"
+               class="btn contact-details"><i class="fab fa-twitter"></i>
+              </a>
+            <a href="https://codepen.io/mintz" target="_blank" class="btn contact-details"><i class="fab fa-codepen"></i></a>
+            <a href="https://github.com/mintz" target="_blank" class="btn contact-details"> <i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/mintz/" target="_blank" class="btn contact-details"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:mintz.20@gmail.com" class="btn contact-details"><i class="far fa-envelope"></i></a>
+          </div>
+    </header>
