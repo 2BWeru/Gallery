@@ -1,0 +1,122 @@
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: 'Overpass', sans-serif; letter-spacing: 0px; font-size: 17px; color: #8d8f90; font-weight: 400; line-height: 32px; background-color:#25292a; }
+h1, h2, h3, h4, h5, h6 { color: #25292a; margin: 0px 0px 10px 0px; font-family: 'Overpass', sans-serif; font-weight: 700; letter-spacing: -1px; line-height: 1; }
+h1 { font-size: 34px; }
+h2 { font-size: 28px; line-height: 38px; color:#f85759}
+h3 { font-size: 22px; line-height: 32px; }
+h4 { font-size: 20px; }
+h5 { font-size: 17px; }
+h6 { font-size: 12px; }
+p { margin: 0 0 20px; line-height: 1.7; }
+p:last-child { margin: 0px; }
+ul, ol { }
+a { text-decoration: none; color: #8d8f90; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
+a:focus, a:hover { text-decoration: none; color: #f85759; }
+
+
+
+.page-header { background: url(https://easetemplate.com/free-website-templates/hike/images/pageheader.jpg)no-repeat; position: relative; background-size: cover; }
+.page-caption { padding-top: 170px; padding-bottom: 174px; }
+.page-title { font-size: 46px; line-height: 1; color: #fff; font-weight: 600; text-align: center; }
+
+.card-section { position: relative; bottom: 60px; }
+.card-block { padding: 80px; }
+.section-title { margin-bottom: 60px; }
+
+
+
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+/* DEMO GENERAL ============================== */
+.hover {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 60%;
+  }
+  
+  .hover-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    transition: all 0.4s;
+  }
+  
+  .hover img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
+  }
+  
+  .hover-content {
+    position: relative;
+    z-index: 99;
+  }
+  
+  
+  /* DEMO 1 ============================== */
+  .hover-1 img {
+    width: 105%;
+    position: absolute;
+    top: 0;
+    left: -5%;
+    transition: all 0.3s;
+  }
+  
+  .hover-1-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    transition: all 0.4s;
+  }
+  
+  .hover-1 .hover-overlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .hover-1-description {
+    transform: translateY(0.5rem);
+    transition: all 0.4s;
+    opacity: 0;
+  }
+  
+  .hover-1:hover .hover-1-content {
+    bottom: 2rem;
+  }
+  
+  .hover-1:hover .hover-1-description {
+    opacity: 1;
+    transform: none;
+  }
+  
+  .hover-1:hover img {
+    left: 0;
+  }
+  
+  .hover-1:hover .hover-overlay {
+    opacity: 0;
+  }
+  
+  
+  /*
+  *
+  * ==========================================
+  * FOR DEMO PURPOSES
+  * ==========================================
+  *
+  */
+  body {
+    min-height: 100vh;
+    background-color: #fafafa;
+  }
+  
