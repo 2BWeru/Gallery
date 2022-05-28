@@ -21,8 +21,6 @@ class Location(models.Model):
 
     def save_Location(self):
         self.save()
-    
-
 
 
 class Category(models.Model):
@@ -36,7 +34,7 @@ class Category(models.Model):
     def __str__(self):
         return self.title
 
-    def save_Category(self):
+    def save_(self):
         self.save()
 
     
@@ -63,12 +61,6 @@ class Imagegallery(models.Model):
     
     def save_imagegallery(self):
         self.save()
-    
-
-    @classmethod
-    def id_images(cls,id):
-        images = cls.objects.filter(id = id)
-        return images
 
     
     
