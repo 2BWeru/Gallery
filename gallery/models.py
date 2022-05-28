@@ -34,7 +34,7 @@ class Category(models.Model):
     def __str__(self):
         return self.title
 
-    def save_(self):
+    def save_category(self):
         self.save()
 
     
@@ -58,10 +58,10 @@ class Imagegallery(models.Model):
 
     def __str__(self):
         return self.name
-    
+
+    #  save
     def save_imagegallery(self):
         self.save()
 
-    
-    
+
 
