@@ -37,55 +37,51 @@
     z-index: 99;
   }
   
-  
-  /* DEMO 5 ============================== */
-  .hover-5::after {
-    content: '';
-    width: 100%;
-    height: 10px;
-    background: #47c650;
+    
+  /* DEMO 1 ============================== */
+  .hover-1 img {
+    width: 105%;
     position: absolute;
-    bottom: -10px;
-    left: 0;
-    display: block;
+    top: 0;
+    left: -5%;
     transition: all 0.3s;
-    z-index: 999;
   }
   
-  .hover-5 .hover-overlay {
-    background: rgba(0, 0, 0, 0.4);
-  }
-  
-  .hover-5-title {
+  .hover-1-content {
     position: absolute;
-    bottom: 1rem;
+    bottom: 0;
     left: 0;
-    transition: all 0.3s;
-    padding: 2rem 3rem;
     z-index: 99;
+    transition: all 0.4s;
   }
   
-  .hover-5-title span {
+  .hover-1 .hover-overlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .hover-1-description {
+    transform: translateY(0.5rem);
     transition: all 0.4s;
     opacity: 0;
-    color: #47c650;
   }
   
-  .hover-5:hover .hover-overlay {
-    background: rgba(0, 0, 0, 0.8);
+  .hover-1:hover .hover-1-content {
+    bottom: 2rem;
   }
   
-  .hover-5:hover .hover-5-title {
-    bottom: 0;
-  }
-  
-  .hover-5:hover .hover-5-title span {
+  .hover-1:hover .hover-1-description {
     opacity: 1;
+    transform: none;
   }
   
-  .hover-5:hover::after {
-    bottom: 0;
+  .hover-1:hover img {
+    left: 0;
   }
+  
+  .hover-1:hover .hover-overlay {
+    opacity: 0;
+  }
+  
   
   /*
   *
@@ -96,6 +92,19 @@
   */
   body {
     min-height: 100vh;
-    background-color: #fafafa;
+    background-color: #011627;
+	
   }
-  
+ .container{
+	border:7px solid #eff7f6;
+	border-top-right-radius: 50px 20px;
+	border-bottom-right-radius: 50px 20px;
+	border-top-left-radius: 50px 20px;
+	border-bottom-left-radius: 50px 20px;
+	margin-top: 20px;
+	padding-top: 30px;
+ } 
+
+/* footer */
+
+/* footer */
