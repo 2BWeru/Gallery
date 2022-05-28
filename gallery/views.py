@@ -49,9 +49,9 @@ def searchCategory(request):
         message = "Kindly input a search term to get any results"
         return render(request, 'main/search.html',{"message":message})
 
-def showCategory(request,category_id):
+def showCategory(request,id):
     try:
-        categories = Category.objects.get(id=category_id)
+        categories = Category.objects.get(id=id)
         images = Imagegallery.objects.filter(category=categories)
        
         context = {}
