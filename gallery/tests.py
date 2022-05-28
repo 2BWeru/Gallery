@@ -16,17 +16,7 @@ class ImagegalleryTestClass(TestCase):
         images= Imagegallery.objects.all()
         self.assertTrue(len(images) > 0)
     
-    def test_get_image(self):
-        save_imagegallery = Imagegallery.save_imagegallery(self,)
-        self.assertTrue(len(save_imagegallery)>0)
     
-
-    def test_get_images_by_id(self):
-        test_id= '3'
-        id_images = Imagegallery.id_images(id)
-        self.assertTrue(len(id_images) == 0)
-
-
 
 
 class LocationTestClass(TestCase):
@@ -49,11 +39,13 @@ class CategoryTestClass(TestCase):
         # Set up method
     def setUp(self):
         self.food= Category(title="matoke",id=2,post_date="2020-02-12")
+
     def test_instance(self):
         self.assertTrue(isinstance(self.food,Category))
+
     # Testing Save Method
     def test_save_method(self):
-        self.food.save_Category()
+        self.food.save_category()
         categories= Category.objects.all()
         self.assertTrue(len(categories) > 0)
 
