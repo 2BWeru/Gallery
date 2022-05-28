@@ -1,0 +1,38 @@
+{% load static %}
+{% load bootstrap3 %}
+
+{% block styles %}
+{% bootstrap_css %}
+<link rel="stylesheet" href="{% static 'css/search.css' %}">
+
+{% endblock %}
+
+<div class="container">
+    {% if categories %}
+    <h1 class="display-4 font-weight-bold">Found {{ categories|length }} of searched term {{message}}</h1>
+    <br>
+    {% for data in categories %}
+    <header class="text-center">
+    <h1 class="display-4 font-weight-bold">{{data.title}}</h1>
+    <mark><a href="{% url 'show-category' category.id %}">See more about this Category...</a></mark>
+    {% endfor %}
+    {% else %}
+    <h2>Found 0 articles for the search term {{message}}</h2>
+  {% endif %}
+</div>
+
+
+
+
+
+<div class="container py-5">
+    <!-- For Demo Purpose -->
+    {% if categories %}
+    
+    {% endif %}
+      <p class="font-italic text-muted mb-0">An inspirational collection of subtle hover effects</p>
+      <p class="font-italic">Snippet By <a href="https://bootstrapious.com" class="text-muted">
+          <u>Bootstrapious</u></a>
+      </p>
+    </header>
+    

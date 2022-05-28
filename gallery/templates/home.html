@@ -1,0 +1,121 @@
+{% load static %}
+{% load bootstrap3 %}
+
+{% block styles %}
+{% bootstrap_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+ <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+ <!-- page-header -->
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                  <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                      <div class="navbar-header">
+                        {% for location in locations %}
+                        <a class="navbar-brand" href="{% url 'image-location' location.id %}"><mark>{{location.venue}}</mark></a>
+                        {% endfor %}
+                      </div>
+                
+                      <!-- Adding a search form  -->
+                      <div class="col-sm-4 col-md-4 navbar-right">
+                        <form class="navbar-form" role="search" action="{% url 'search-category' %}">
+                          {% csrf_token %}
+                          <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search Category" name="category">
+                            <div class="input-group-btn">
+                              <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                          </div>
+                
+                        </form>
+                      </div>
+                      <!-- search form end -->
+                    </div>
+                  </nav>
+                    <div class="page-caption">
+                        <h1 class="page-title">Hike Pageheader</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.page-header-->
+    <!-- news -->
+    <div class="card-section">
+        <div class="container">
+            <div class="card-block bg-white mb30">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <!-- section-title -->
+                        <div class="section-title mb-0">
+                            <h2>All about Hike. We share our knowledge on blog</h2>
+                            <p>Check out our previous tours : </p>
+                          </div>
+                        <!-- /.section-title -->
+                    </div>
+                    {% for location in locations %}
+                      <nav class="nav d-flex justify-content-between">
+                      <a class="p-2 link-secondary" href="{% url 'image-location' location.id %}"><mark>{{location.venue}}</mark></a>
+                    {% endfor%}
+                    <div class="row">
+                      <!-- DEMO 1 Item-->
+                      <div class="col-lg-6 mb-3 mb-lg-0">
+                        <div class="hover hover-1 text-white rounded"><img src="https://bootstrapious.com/i/snippets/sn-img-hover/hoverSet-3.jpg" alt="">
+                          <div class="hover-overlay"></div>
+                          <div class="hover-1-content px-5 py-4">
+                            <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Image </span>Caption</h3>
+                            <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <!-- <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+              Created for <a href="https://easetemplate.com/downloads/digital-marketing-website-template-hike-bold-design/" target="_blank">easetemplate</a>
+              </div></div>
+            </div> -->
+          </div>
+        </div>
+<!--  section -->
+
+  <!-- DEMO 1 -->
+  <div class="py-5">
+    <h3 class="font-weight-bold mb-0">Demo 1</h3>
+    <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <div class="row">
+      <!-- DEMO 1 Item-->
+      <div class="col-lg-6 mb-3 mb-lg-0">
+        <div class="hover hover-1 text-white rounded"><img src="https://bootstrapious.com/i/snippets/sn-img-hover/hoverSet-3.jpg" alt="">
+          <div class="hover-overlay"></div>
+          <div class="hover-1-content px-5 py-4">
+            <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Image </span>Caption</h3>
+            <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </div>
+      <!-- DEMO 1 Item-->
+      <div class="col-lg-6">
+        <div class="hover hover-1 text-white rounded"><img src="https://bootstrapious.com/i/snippets/sn-img-hover/hoverSet-4.jpg" alt="">
+          <div class="hover-overlay"></div>
+          <div class="hover-1-content px-5 py-4">
+            <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Image </span>Caption</h3>
+            <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- section -->
+        
+<!-- section -->
+
+<!-- section -->

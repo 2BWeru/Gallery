@@ -1,0 +1,69 @@
+{% load static %}
+{% load bootstrap3 %}
+
+{% block styles %}
+{% bootstrap_css %}
+<link rel="stylesheet" href="{% static 'css/location.css' %}">
+
+{% endblock %}
+
+
+<div class="container py-5">
+    <!-- For Demo Purpose -->
+    <header class="text-center">
+      <h1 class="display-4 font-weight-bold">Bootstrap Image Hover</h1>
+      <p class="font-italic text-muted mb-0">An inspirational collection of subtle hover effects</p>
+      <p class="font-italic">Snippet By <a href="https://bootstrapious.com" class="text-muted">
+          <u>Bootstrapious</u></a>
+      </p>
+    </header>
+    <!-- DEMO 5 -->
+    <div class="py-5">
+      <h3 class="font-weight-bold mb-0">Demo 5</h3>
+      <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <div class="row">
+        <!-- DEMO 5 Item-->
+        {% for image in images %}
+        <div class="col-lg-6">
+          <!-- DEMO 5 Item-->
+          <div class="hover hover-5 text-white rounded">
+            <a href="{{image.image.url}}" class="fancybox" rel="ligthbox">
+              <img src="{{image.image.url}}" class="zoom img-fluid "alt="">
+            <div class="hover-overlay"></div>
+            <div class="hover-5-content">
+              <h3 class="hover-5-title text-uppercase font-weight-light mb-0"> 
+                  <strong class="font-weight-bold text-white"></strong>
+                  <span>{{image.description}}</span>
+                  <br>
+                <span>{{image.hashtag}}</span>
+                <br>
+                <span>Title:{{image.name}}</span>
+                <br>
+                <a href="*">{{image.web_address}}</a></i>
+              </h3>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  
+  </div>
+  
+
+  <script>
+      $(document).ready(function(){
+  $(".fancybox").fancybox({
+        openEffect: "none",
+        closeEffect: "none"
+    });
+    
+    $(".zoom").hover(function(){
+		
+		$(this).addClass('transition');
+	}, function(){
+        
+		$(this).removeClass('transition');
+	});
+});
+  </script>
