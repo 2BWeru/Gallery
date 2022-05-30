@@ -15,7 +15,6 @@ from pathlib import Path
 import django_heroku
 import dj_database_url
 from decouple import config,Csv
-import cloudinary
 
 
 
@@ -158,11 +157,12 @@ MEDIA_URL ='media/'
 MEDIA_ROOT=os.path.join(BASE_DIR, "static")
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
-cloudinary.config( 
-  cloud_name = "dg1kp8npi", 
-  api_key = "842657586533351", 
-  api_secret = "02htpAtgR1oV4FZjMUffxvYiQac",
-)
+
+CLOUDINARY_STORAGE = { 
+    'CLOUD_NAME':"dg1kp8npi" ,
+    'API_KEY': "842657586533351",
+    'API_SECRET': "02htpAtgR1oV4FZjMUffxvYiQac",
+}
 
 # Configure Django App for Heroku.
 django_heroku.settings(locals())
