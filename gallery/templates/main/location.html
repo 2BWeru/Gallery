@@ -20,8 +20,8 @@
 			{% for pics in images %}
 			<div class="col-lg-6">
 			  <div class="hover hover-1 text-white rounded" data-toggle="modal" data-target="#lightbox">
-				  <a href="{{pics.image.url}}" class="fancybox" rel="ligthbox">
-				<img src="{{pics.image.url}}"  alt="">
+				  <a href="{{pics.image.url}}" class="fancybox" rel="ligthbox" >
+				<img src="{{pics.image.url}}"  alt="" width="400px" height="500px">
 				<div class="hover-overlay"></div>
 				<div class="hover-1-content px-5 py-4">
 				  <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"><mark>{{pics.hashtag}} </mark><span class="font-weight-light"></span></h3>
