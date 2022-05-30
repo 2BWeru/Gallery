@@ -1,8 +1,4 @@
-from turtle import title
-from unicodedata import category, name
 from urllib import request
-from xml.sax.xmlreader import Locator
-from django.http import Http404, HttpRequest
 from django.shortcuts import render
 from .models import Category, Imagegallery, Location
 
