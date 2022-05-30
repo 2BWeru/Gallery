@@ -1,6 +1,9 @@
 {% load static %}
 {% load bootstrap3 %}
 
+{% load cloudinary %}
+{% cloudinary image_gallery_instance.image.name width=500 height=500 %}
+
 {% block styles %}
 {% bootstrap_css %}
 <link rel="stylesheet" href="{% static 'css/location.css' %}">
