@@ -1,13 +1,4 @@
-from datetime import timezone
-from distutils.command import upload
-from email.headerregistry import Address
-from turtle import title
-from unicodedata import category
-from uuid import uuid4
-from django.template.defaultfilters import slugify
-# from django_resized import ResizedImageField
 from django.db import models
-from django.urls import reverse
 
 # Create your models here.
 class Location(models.Model):
