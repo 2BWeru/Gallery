@@ -1,6 +1,6 @@
 from urllib import request
 from django.shortcuts import render
-from .models import Category, Imagegallery, Location
+from .models import Category, Location, Pictures
 
 # Create your views here.
 def navbar(request):
@@ -19,7 +19,9 @@ def home(request):
 def locationPage(request,id):
     try:
         locations = Location.objects.get(id=id)
-        images = Imagegallery.objects.filter(location=locations)
+        # images = Imagegallery.objects.filter(location=locations)
+        images = Pictures.objects.filter(location=locations)
+        # for x in images:
         # for x in images:
         #   x.shortDescription = x.description[:130]
         context = {}
