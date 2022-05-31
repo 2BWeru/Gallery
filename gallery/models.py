@@ -59,7 +59,11 @@ class Pictures(models.Model):
     
     def delete_location(self): 
         self.delete()
-        
+
+
+    def __str__(self):
+        return self.name
+
     @classmethod
     def all_images(cls): 
         images= Pictures.objects.all() 
@@ -70,5 +74,4 @@ class Pictures(models.Model):
         updated_img = Pictures.objects.filter(image_name=current_img).update(name=new_img)
         return updated_img
 
-    def __str__(self):
-        return self.name
+    
