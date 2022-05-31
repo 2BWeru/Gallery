@@ -29,7 +29,9 @@ class Category(models.Model):
     def save_category(self):
         self.save()
 
-    
+    def delete_location(self): 
+        self.delete()
+
     @classmethod
     def search_by_title(cls,searched_term):
         category = cls.objects.filter(title__icontains=searched_term)
@@ -54,7 +56,10 @@ class Pictures(models.Model):
     #  save
     def save_imagegallery(self):
         self.save()
-     
+    
+    def delete_location(self): 
+        self.delete()
+        
     @classmethod
     def all_images(cls): 
         images= Pictures.objects.all() 
@@ -67,4 +72,3 @@ class Pictures(models.Model):
 
     def __str__(self):
         return self.name
-        
