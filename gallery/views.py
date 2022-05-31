@@ -50,7 +50,8 @@ def searchCategory(request):
 def showCategory(request,id):
     try:
         categories = Category.objects.get(id=id)
-        images = Imagegallery.objects.filter(category=categories)
+        images = Pictures.objects.filter(category=categories)
+        
        
         context = {}
         context['images'] = images
